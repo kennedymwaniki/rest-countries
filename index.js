@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
       filter.style.background = "hsl(0, 0%, 98%)";
       Countries.style.background = "hsl(0, 0%, 98%)";
       searchInput.style.background = "hsl(207, 26%, 17%)";
-
     }
   });
 
@@ -42,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch((error) => console.error("error.message"));
 
   // Display countries
-  function displayCountries(countries) {
+  function showCountries(countries) {
     Countries.innerHTML = countries
       .map(
         (country) => `
@@ -64,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const filteredCountries = countriesData.filter((country) =>
       country.name.toLowerCase().includes(searchValue)
     );
-    displayCountries(filteredCountries);
+    showCountries(filteredCountries);
   });
 
   // Filter functionality
@@ -73,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const filteredCountries = filterValue
       ? countriesData.filter((country) => country.region === filterValue)
       : countriesData;
-    displayCountries(filteredCountries);
+    showCountries(filteredCountries);
   });
 
   // Handle country click to show details
