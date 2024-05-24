@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       filter.style.background = "hsl(0, 0%, 98%)";
       Countries.style.background = "hsl(0, 0%, 98%)";
       searchInput.style.background = "hsl(207, 26%, 17%)";
+      header.style.background = "hsl(207, 26%, 17%)";
     }
   });
 
